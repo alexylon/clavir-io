@@ -138,7 +138,7 @@ cargo build --release`}</code></pre>
       <footer className="footer">
         <div className="container footer-inner">
           <p>
-            Made by <a href="https://github.com/alexylon" target="_blank" rel="noopener noreferrer">Alexander Alexandrov</a> &middot; MIT License
+            Made by <a href="https://alexo.io" target="_blank" rel="noopener noreferrer">Alexander Alexandrov</a> &middot; MIT License
           </p>
           <div className="footer-links">
             <a href="https://github.com/alexylon/clavirio" target="_blank" rel="noopener noreferrer">GitHub</a>
