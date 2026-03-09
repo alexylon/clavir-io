@@ -4,7 +4,7 @@ export interface Keybinding {
 }
 
 export const keybindings: Keybinding[] = [
-  { keys: "\u2191 / k  \u2193 / j", action: "Navigate lessons or scroll history" },
+  { keys: "\u2191 \u2193 / k j", action: "Navigate lessons or scroll history" },
   { keys: "Enter", action: "Start selected lesson" },
   { keys: "l", action: "Cycle layout: QWERTY \u2192 Dvorak \u2192 Colemak" },
   { keys: "1 \u2013 4", action: "Toggle fingers, hints, keyboard, theme" },
