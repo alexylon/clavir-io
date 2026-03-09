@@ -1,3 +1,24 @@
+function copyToClipboard(text: string, btn: HTMLButtonElement) {
+  navigator.clipboard.writeText(text).then(() => {
+    const original = btn.innerHTML;
+    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;
+    setTimeout(() => { btn.innerHTML = original; }, 1500);
+  });
+}
+
+const CopyButton = ({ text }: { text: string }) => (
+  <button
+    className="copy-btn"
+    title="Copy to clipboard"
+    onClick={(e) => copyToClipboard(text, e.currentTarget)}
+  >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+    </svg>
+  </button>
+);
+
 function App() {
   return (
     <div className="page">
@@ -92,13 +113,19 @@ function App() {
             <div className="install-methods">
               <div className="install-card">
                 <h3>From crates.io</h3>
-                <pre><code>cargo install clavirio</code></pre>
+                <div className="code-wrapper">
+                  <pre><code>cargo install clavirio</code></pre>
+                  <CopyButton text="cargo install clavirio" />
+                </div>
               </div>
               <div className="install-card">
                 <h3>From source</h3>
-                <pre><code>{`git clone https://github.com/alexylon/clavirio.git
+                <div className="code-wrapper">
+                  <pre><code>{`git clone https://github.com/alexylon/clavirio.git
 cd clavirio
 cargo build --release`}</code></pre>
+                  <CopyButton text={`git clone https://github.com/alexylon/clavirio.git\ncd clavirio\ncargo build --release`} />
+                </div>
               </div>
             </div>
             <p className="install-note">
