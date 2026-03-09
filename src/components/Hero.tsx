@@ -14,10 +14,7 @@ export default function Hero() {
           Progressive lessons, real-time stats, a virtual keyboard with finger hints — all without leaving the command line.
         </p>
         <div className={styles.actions}>
-          <a href="#install" className={styles.btnPrimary} onClick={(e) => {
-            e.preventDefault();
-            document.getElementById("install")?.scrollIntoView({ behavior: "smooth" });
-          }}>Get Started</a>
+          <button className={styles.btnPrimary} onClick={() => document.getElementById("install")?.scrollIntoView({ behavior: "smooth" })}>Get Started</button>
           <a href="https://github.com/alexylon/clavirio" className={styles.btnSecondary} target="_blank" rel="noopener noreferrer">
             View on GitHub
           </a>

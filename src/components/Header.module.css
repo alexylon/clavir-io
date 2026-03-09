@@ -16,10 +16,14 @@
 
 .logo {
   font-family: var(--font-mono);
-  font-size: 1.15rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  color: var(--text) !important;
+  color: var(--text);
   letter-spacing: -0.02em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
 }
 
 .nav {
@@ -28,17 +32,29 @@
   font-size: 0.9rem;
 }
 
-.nav a {
+.nav a,
+.nav button {
   color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: inherit;
+  transition: color 0.15s;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav button:hover {
   color: var(--text);
 }
 
 @media (max-width: 1040px) {
+  .logo {
+    font-size: 0.85rem;
+  }
+
   .nav {
     gap: 1rem;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 }

@@ -40,6 +40,10 @@
   border-radius: 8px;
   font-size: 0.9rem;
   font-weight: 500;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
   transition: all 0.15s;
 }
 
