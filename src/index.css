@@ -17,7 +17,8 @@
   --border: #2a2d3e;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
-  --max-width: 960px;
+  --max-width-1: 960px;
+  --max-width-2: 720px;
 }
 
 html {
@@ -50,9 +51,16 @@ code {
 }
 
 .container {
-  max-width: var(--max-width);
+  max-width: var(--max-width-1);
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+
+/* Shared section intro */
+.section-intro {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
 }
 
 /* Header */
@@ -117,7 +125,7 @@ code {
 .subtitle {
   font-size: 1rem;
   color: var(--text-muted);
-  max-width: 560px;
+  max-width: 580px;
   margin: 0 auto 2rem;
 }
 
@@ -175,17 +183,22 @@ code {
   height: auto;
 }
 
-/* Features */
-.features {
-  padding: 4rem 0;
-}
-
-.features h2 {
+/* Section headings (shared) */
+.features h2,
+.lessons h2,
+.keybindings h2,
+.platforms h2,
+.install h2 {
   text-align: center;
   font-size: 1.75rem;
   font-weight: 600;
   color: #fff;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Features */
+.features {
+  padding: 4rem 0;
 }
 
 .feature-grid {
@@ -225,23 +238,148 @@ code {
   line-height: 1.55;
 }
 
-/* Install */
-.install {
+/* Lessons */
+.lessons {
   padding: 4rem 0;
 }
 
-.install h2 {
-  text-align: center;
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 1rem;
+.lesson-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.625rem;
 }
 
-.install-intro {
-  text-align: center;
+.lesson-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.2s;
+}
+.lesson-item:hover {
+  border-color: var(--accent);
+}
+
+.lesson-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--bg);
+  border-radius: 4px;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.lesson-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lesson-detail {
+  margin-left: auto;
+  font-size: 0.75rem;
   color: var(--text-muted);
-  margin-bottom: 2rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Keybindings */
+.keybindings {
+  padding: 4rem 0;
+}
+
+.keybinding-list {
+  max-width: var(--max-width-2);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.keybinding-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.keybinding-row kbd {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  background: var(--bg);
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.keybinding-row span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+/* Platforms */
+.platforms {
+  padding: 4rem 0;
+}
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.platform-card {
+  text-align: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: border-color 0.2s;
+  max-width: var(--max-width-2);
+}
+.platform-card:hover {
+  border-color: var(--accent);
+}
+
+.platform-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.platform-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.35rem;
+}
+
+.platform-card p {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+}
+
+/* Install */
+.install {
+  padding: 4rem 0;
 }
 
 .install-methods {
@@ -273,7 +411,7 @@ code {
 .install-card pre {
   background: var(--bg);
   border-radius: 6px;
-  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  padding: 2rem 1rem 0.75rem 1rem;
   overflow-x: auto;
   max-width: 100%;
   scrollbar-color: var(--border) transparent;
@@ -359,12 +497,25 @@ code {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1040px) {
   .hero h1 {
     font-size: 2.25rem;
   }
 
-  .feature-grid {
+  .container {
+    max-width: var(--max-width-2);
+  }
+
+  .features,
+  .lessons,
+  .platforms {
+    max-width: var(--max-width-2);
+    margin: 0 auto;
+  }
+
+  .feature-grid,
+  .lesson-grid,
+  .platform-grid {
     grid-template-columns: 1fr;
   }
 
@@ -381,5 +532,15 @@ code {
   .nav {
     gap: 1rem;
     font-size: 0.85rem;
+  }
+
+  .keybinding-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .keybinding-row span {
+    text-align: left;
   }
 }

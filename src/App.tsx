@@ -19,6 +19,34 @@ const CopyButton = ({ text }: { text: string }) => (
   </button>
 );
 
+const lessons = [
+  { num: 1, name: "f j", detail: "Index fingers" },
+  { num: 2, name: "d k", detail: "Index + middle" },
+  { num: 3, name: "s l ;", detail: "Ring + pinky" },
+  { num: 4, name: "a s d f j k l ;", detail: "Full home row" },
+  { num: 5, name: "g h", detail: "Home row complete" },
+  { num: 6, name: "e i r u", detail: "Top row reach" },
+  { num: 7, name: "q w e r t y u i o p", detail: "Full top row" },
+  { num: 8, name: "z x c v b n m , .", detail: "Bottom row" },
+  { num: 9, name: "All Letters", detail: "Pangrams" },
+  { num: 10, name: "Capitals & Shift", detail: "Mixed case" },
+  { num: 11, name: "0–9 Numbers", detail: "Numbers in context" },
+  { num: 12, name: "Punctuation & Symbols", detail: "Special characters" },
+  { num: 13, name: "Common Words", detail: "High-frequency words" },
+  { num: 14, name: "Full Paragraphs", detail: "Real-world text" },
+  { num: 15, name: "Code (Rust)", detail: "Programming syntax" },
+];
+
+const keybindings = [
+  { keys: "↑ / k  ↓ / j", action: "Navigate lessons or scroll history" },
+  { keys: "Enter", action: "Start selected lesson" },
+  { keys: "h", action: "Open session history" },
+  { keys: "Ctrl-F", action: "Load a custom text file" },
+  { keys: "Ctrl-R", action: "Restart current lesson" },
+  { keys: "Esc", action: "Return to menu / quit" },
+  { keys: "r", action: "Restart after completion" },
+];
+
 function App() {
   return (
     <div className="page">
@@ -27,9 +55,9 @@ function App() {
           <a href="/" className="logo">clavirio</a>
           <nav className="nav">
             <a href="#features">Features</a>
+            <a href="#lessons">Lessons</a>
             <a href="#install">Install</a>
             <a href="https://github.com/alexylon/clavirio" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://crates.io/crates/clavirio" target="_blank" rel="noopener noreferrer">crates.io</a>
           </nav>
         </div>
       </header>
@@ -42,8 +70,9 @@ function App() {
               A friendly typing tutor that lives in your terminal.
             </p>
             <p className="subtitle">
-              Built with Rust and <a href="https://ratatui.rs" target="_blank" rel="noopener noreferrer">ratatui</a>.
-              Practice touch typing with progressive lessons, real-time stats, and a virtual keyboard — all without leaving the command line.
+              From Latin <em>clavis</em> (key). Built with Rust
+              and <a href="https://ratatui.rs" target="_blank" rel="noopener noreferrer">ratatui</a>.
+              Progressive lessons, real-time stats, a virtual keyboard with finger hints — all without leaving the command line.
             </p>
             <div className="hero-actions">
               <a href="#install" className="btn btn-primary">Get Started</a>
@@ -73,32 +102,93 @@ function App() {
               <div className="feature-card">
                 <div className="feature-icon">~</div>
                 <h3>15 Progressive Lessons</h3>
-                <p>From home row basics to full paragraphs and even Rust code snippets. Lessons are ordered by difficulty so you can build skills gradually.</p>
+                <p>From home-row basics to full paragraphs and Rust code. Lessons are ordered by difficulty so you build skills gradually. The menu auto-advances to your next unfinished lesson.</p>
               </div>
               <div className="feature-card">
                 <div className="feature-icon">&gt;_</div>
                 <h3>Live Stats</h3>
-                <p>See your WPM, accuracy, elapsed time, and keystrokes as you type. A completion summary highlights your weakest keys.</p>
+                <p>WPM, accuracy, elapsed time, and keystroke counts update as you type. A completion summary highlights your weakest keys so you know what to practice next.</p>
               </div>
               <div className="feature-card">
                 <div className="feature-icon">&#9000;</div>
                 <h3>Virtual Keyboard</h3>
-                <p>An on-screen keyboard highlights the next expected key with finger hints (Pinky, Ring, Middle, Index, Thumb). Supports macOS and PC layouts.</p>
+                <p>An on-screen keyboard highlights the next expected key in real time. Finger hints (Pinky, Ring, Middle, Index, Thumb) help you learn proper hand placement. Adapts to macOS and PC layouts.</p>
               </div>
               <div className="feature-card">
                 <div className="feature-icon">&darr;</div>
                 <h3>Session History</h3>
-                <p>Results are saved to <code>~/.clavirio/history.json</code>. Browse past sessions, see per-lesson averages, and track your progress over time.</p>
+                <p>Results are saved to <code>~/.clavirio/history.json</code> automatically. Browse past sessions, view per-lesson averages, and track your improvement over time.</p>
               </div>
               <div className="feature-card">
                 <div className="feature-icon">&#9998;</div>
                 <h3>Custom Texts</h3>
-                <p>Load any text file via <code>Ctrl-F</code> or pass it as a CLI argument. Practice with your own content.</p>
+                <p>Load any text file with <code>Ctrl-F</code> or pass it as a CLI argument. Practice typing with your own content — code, prose, anything.</p>
               </div>
               <div className="feature-card">
                 <div className="feature-icon">&#10003;</div>
                 <h3>Just Works</h3>
-                <p>No config files, no accounts, no internet needed. Install it, run it, start typing. Sessions are saved on exit — even on SIGTERM.</p>
+                <p>No config files, no accounts, no internet needed. A single binary — install it, run it, start typing. Sessions are saved on exit, even on SIGTERM.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="lessons" className="lessons">
+          <div className="container">
+            <h2>15 Built-in Lessons</h2>
+            <p className="section-intro">
+              Each lesson introduces new keys and builds on the previous ones. Start from the home row and work your way up to full paragraphs and code.
+            </p>
+            <div className="lesson-grid">
+              {lessons.map((l) => (
+                <div className="lesson-item" key={l.num}>
+                  <span className="lesson-num">{l.num}</span>
+                  <span className="lesson-name">{l.name}</span>
+                  <span className="lesson-detail">{l.detail}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="keybindings" className="keybindings">
+          <div className="container">
+            <h2>Keyboard Controls</h2>
+            <p className="section-intro">
+              Navigate with Vim-style keys or arrows. Everything is one or two keystrokes away.
+            </p>
+            <div className="keybinding-list">
+              {keybindings.map((kb) => (
+                <div className="keybinding-row" key={kb.keys}>
+                  <kbd>{kb.keys}</kbd>
+                  <span>{kb.action}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="platforms">
+          <div className="container">
+            <h2>Cross-platform</h2>
+            <p className="section-intro">
+              Runs on any terminal that supports UTF-8. The virtual keyboard adapts its modifier keys to your OS.
+            </p>
+            <div className="platform-grid">
+              <div className="platform-card">
+                <div className="platform-icon">&#63743;</div>
+                <h3>macOS</h3>
+                <p>Native support with &#8984; &#8997; &#8963; modifier keys</p>
+              </div>
+              <div className="platform-card">
+                <div className="platform-icon">&#128039;</div>
+                <h3>Linux</h3>
+                <p>Full support on X11 and Wayland terminals</p>
+              </div>
+              <div className="platform-card">
+                <div className="platform-icon">&#8862;</div>
+                <h3>Windows</h3>
+                <p>Works with Win, Alt, and Ctrl modifier keys</p>
               </div>
             </div>
           </div>
@@ -107,7 +197,7 @@ function App() {
         <section id="install" className="install">
           <div className="container">
             <h2>Install</h2>
-            <p className="install-intro">
+            <p className="section-intro">
               Clavirio is a single binary. Pick whichever way works for you:
             </p>
             <div className="install-methods">
@@ -129,7 +219,7 @@ cargo build --release`}</code></pre>
               </div>
             </div>
             <p className="install-note">
-              Then just run <code>clavirio</code> in your terminal. Optionally pass a text file: <code>clavirio mytext.txt</code>
+              Then run <code>clavirio</code> in your terminal. Or pass a text file directly: <code>clavirio mytext.txt</code>
             </p>
           </div>
         </section>
