@@ -11,7 +11,7 @@ export default function Lessons() {
   return (
     <section id="lessons" className={styles.section}>
       <div className="container">
-        <h2 className={styles.heading}>15 Built-in Lessons</h2>
+        <h2 className="section-heading">15 Built-in Lessons</h2>
         <p className="section-intro">
           Each lesson introduces new keys and builds on the previous ones.
           Lessons 1–9 are tailored to each keyboard layout; lessons 10–15 are
@@ -25,7 +25,7 @@ export default function Lessons() {
               className={`${styles.tab} ${l === layout ? styles.tabActive : ""}`}
               onClick={() => setLayout(l)}
             >
-              {l.charAt(0).toUpperCase() + l.slice(1)}
+              {l === "qwerty" ? "QWERTY" : l.charAt(0).toUpperCase() + l.slice(1)}
             </button>
           ))}
         </div>

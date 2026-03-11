@@ -9,9 +9,9 @@ export default function Install() {
   return (
     <section id="install" className={styles.section}>
       <div className="container">
-        <h2 className={styles.heading}>Install</h2>
+        <h2 className="section-heading">Install</h2>
         <p className="section-intro">
-          <span className="brand-mono">Clavirio</span> is a single binary. Pick whichever way works for you:
+          <span className="brand-mono">clavirio</span> is a single binary. Requires <a href="https://www.rust-lang.org/tools/install" target="_blank" rel="noopener noreferrer">Rust</a> &mdash; pick whichever way works for you:
         </p>
         <div className={styles.methods}>
           <div className={styles.card}>

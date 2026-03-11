@@ -24,7 +24,7 @@ export default function Screenshot() {
           <div className={styles.wrapper} onClick={() => setLightbox("/images/screenshot_dark.webp")}>
             <img
               src="/images/screenshot_dark.webp"
-              alt="Clavirio dark theme — typing lesson with virtual keyboard and live stats"
+              alt="clavirio dark theme — typing lesson with virtual keyboard and live stats"
               width={2742}
               height={2112}
               className={styles.image}
@@ -33,7 +33,7 @@ export default function Screenshot() {
           <div className={styles.wrapper} onClick={() => setLightbox("/images/screenshot_light.webp")}>
             <img
               src="/images/screenshot_light.webp"
-              alt="Clavirio light theme — typing lesson with virtual keyboard and live stats"
+              alt="clavirio light theme — typing lesson with virtual keyboard and live stats"
               width={2742}
               height={2112}
               loading="lazy"
@@ -45,7 +45,7 @@ export default function Screenshot() {
 
       {lightbox && (
         <div className={styles.lightbox} onClick={close}>
-          <img src={lightbox} alt="" className={styles.lightboxImage} />
+          <img src={lightbox} alt="Screenshot enlarged" className={styles.lightboxImage} />
         </div>
       )}
     </section>

@@ -2,14 +2,6 @@
   padding: 4rem 0;
 }
 
-.heading {
-  text-align: center;
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
 .tabs {
   display: flex;
   justify-content: center;

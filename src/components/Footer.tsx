@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.inner}`}>
         <p>
-          <em className="brand-mono">clavirio</em> &mdash; from Latin <em>clavis</em> (key) &middot; Made by <a href="https://alexo.io" target="_blank" rel="noopener noreferrer">Alexander Alexandrov</a> &middot; MIT License
+          <em className="brand-mono">clavirio</em> &mdash; from Latin <em>clavis</em> (key) &bull; Made by <a href="https://alexo.io" target="_blank" rel="noopener noreferrer">Alexander Alexandrov</a> &bull; MIT License
         </p>
         <div className={styles.links}>
           <a href="https://github.com/alexylon/clavirio" target="_blank" rel="noopener noreferrer">GitHub</a>

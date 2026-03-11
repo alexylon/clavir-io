@@ -5,7 +5,7 @@ export default function Keybindings() {
   return (
     <section id="keybindings" className={styles.section}>
       <div className="container">
-        <h2 className={styles.heading}>Keyboard Controls</h2>
+        <h2 className="section-heading">Keyboard Controls</h2>
         <p className="section-intro">
           Navigate with Vim-style keys or arrows. Everything is one or two keystrokes away.
         </p>

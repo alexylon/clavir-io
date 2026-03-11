@@ -75,6 +75,14 @@ code {
   font-family: var(--font-mono);
 }
 
+.section-heading {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
 .section-intro {
   text-align: center;
   color: var(--text-muted);
