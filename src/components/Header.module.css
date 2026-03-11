@@ -18,7 +18,7 @@
   font-family: var(--font-mono);
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--text);
+  color: var(--accent);
   letter-spacing: -0.02em;
   background: none;
   border: none;
@@ -45,7 +45,7 @@
 
 .nav a:hover,
 .nav button:hover {
-  color: var(--text);
+  color: var(--accent);
 }
 
 @media (max-width: 1040px) {

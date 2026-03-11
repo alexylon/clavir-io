@@ -22,7 +22,7 @@
 }
 
 .links a:hover {
-  color: var(--text);
+  color: var(--accent);
 }
 
 @media (max-width: 1040px) {

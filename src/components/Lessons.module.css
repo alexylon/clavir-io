@@ -24,12 +24,18 @@
 
 .tab:hover {
   border-color: var(--accent);
-  color: var(--text);
+  color: var(--accent);
 }
 
 .tabActive {
   background: var(--accent);
   border-color: var(--accent);
+  color: #000;
+}
+
+.tabActive:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
   color: #000;
 }
 
