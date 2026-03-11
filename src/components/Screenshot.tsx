@@ -21,17 +21,22 @@ export default function Screenshot() {
     <section className={styles.section}>
       <div className="container">
         <div className={styles.grid}>
-          <div className={styles.wrapper} onClick={() => setLightbox("/images/screenshot_dark.png")}>
+          <div className={styles.wrapper} onClick={() => setLightbox("/images/screenshot_dark.webp")}>
             <img
-              src="/images/screenshot_dark.png"
+              src="/images/screenshot_dark.webp"
               alt="Clavirio dark theme — typing lesson with virtual keyboard and live stats"
+              width={2742}
+              height={2112}
               className={styles.image}
             />
           </div>
-          <div className={styles.wrapper} onClick={() => setLightbox("/images/screenshot_light.png")}>
+          <div className={styles.wrapper} onClick={() => setLightbox("/images/screenshot_light.webp")}>
             <img
-              src="/images/screenshot_light.png"
+              src="/images/screenshot_light.webp"
               alt="Clavirio light theme — typing lesson with virtual keyboard and live stats"
+              width={2742}
+              height={2112}
+              loading="lazy"
               className={styles.image}
             />
           </div>
