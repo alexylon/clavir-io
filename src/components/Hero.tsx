@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className="container">
-        <img src="/images/icon.svg" alt="" width={120} height={120} className={styles.icon} />
+        <img src="/images/icon.svg" alt="" width={100} height={100} className={styles.icon} />
         <h1 className={styles.title}>clavirio</h1>
         <p className={styles.tagline}>
           Learn touch typing without leaving the terminal.
