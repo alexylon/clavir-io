@@ -27,9 +27,9 @@
     </pattern>
     <!-- Glow behind letter -->
     <radialGradient id="glow" cx="50%" cy="50%" r="45%">
-      <stop offset="0%" stop-color="#33ff33" stop-opacity="0.2"/>
-      <stop offset="30%" stop-color="#33ff33" stop-opacity="0.12"/>
-      <stop offset="55%" stop-color="#33ff33" stop-opacity="0.08"/>
+      <stop offset="0%" stop-color="#33ff33" stop-opacity="0.12"/>
+      <stop offset="30%" stop-color="#33ff33" stop-opacity="0.06"/>
+      <stop offset="55%" stop-color="#33ff33" stop-opacity="0.03"/>
       <stop offset="100%" stop-color="#33ff33" stop-opacity="0"/>
     </radialGradient>
     <!-- Glossy highlight -->
@@ -38,6 +38,18 @@
       <stop offset="50%" stop-color="#ffffff" stop-opacity="0.06"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
+    <!-- Dome highlight - radial shine -->
+    <radialGradient id="dome" cx="50%" cy="38%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Dome edge shadow - vignette for convex look -->
+    <radialGradient id="dome-edge" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="85%" stop-color="#000000" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.35"/>
+    </radialGradient>
     <!-- Blur for glow around shapes -->
     <filter id="cblur" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="50"/>
@@ -55,11 +67,11 @@
     </mask>
     <!-- Mask: sharp cursor block -->
     <mask id="cursormask-sharp">
-      <rect x="401" y="73" width="12" height="366" fill="white"/>
+      <rect x="394" y="73" width="24" height="362" fill="white"/>
     </mask>
     <!-- Mask: blurred cursor for glow -->
     <mask id="cursormask-glow">
-      <rect x="401" y="73" width="12" height="366" fill="white" filter="url(#ledblur)"/>
+      <rect x="394" y="73" width="1" height="362" fill="white" filter="url(#ledblur)"/>
     </mask>
   </defs>
 
@@ -78,11 +90,15 @@
   <!-- Glow -->
   <circle cx="256" cy="256" r="150" fill="url(#glow)"/>
   <!-- Cursor glow halo -->
-  <rect x="396" y="68" width="22" height="376" rx="4" fill="#33ff33" opacity="0.35" filter="url(#ledblur)"/>
+  <rect x="388" y="68" width="16" height="376" rx="4" fill="#33ff33" opacity="0.04" filter="url(#ledblur)"/>
   <!-- Bright dots forming the C -->
   <rect x="28" y="28" width="456" height="456" rx="72" fill="url(#brightdots)" mask="url(#cmask-sharp)"/>
-  <!-- Bright dots forming the cursor -->
-  <rect x="28" y="28" width="456" height="456" rx="72" fill="url(#brightdots)" mask="url(#cursormask-sharp)"/>
+  <!-- Dim dots forming the cursor -->
+  <rect x="28" y="28" width="456" height="456" rx="72" fill="url(#glowdots)" opacity="0.55" mask="url(#cursormask-sharp)"/>
+  <!-- Dome edge shadow -->
+  <rect x="28" y="28" width="456" height="456" rx="72" fill="url(#dome-edge)"/>
+  <!-- Dome highlight -->
+  <rect x="28" y="28" width="456" height="456" rx="72" fill="url(#dome)"/>
   <!-- Gloss -->
   <path d="M28,100 A72,72 0 0,1 100,28 L412,28 A72,72 0 0,1 484,100 L484,280 Q256,355 28,280 Z" fill="url(#gloss)"/>
 </svg>
