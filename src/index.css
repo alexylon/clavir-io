@@ -26,8 +26,8 @@
   --bg-card: #1c1f2e;
   --text: #c9cdd8;
   --text-muted: #8a8fa3;
-  --accent: #4ade4a;
-  --accent-hover: #60e760;
+  --accent: #4CD948;
+  --accent-hover: #60E55C;
   --border: #2a2d3e;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
@@ -80,7 +80,7 @@ code {
   text-align: center;
   font-size: 1.75rem;
   font-weight: 600;
-  color: #fff;
+  color: #ddd;
   margin-bottom: 1rem;
 }
 
