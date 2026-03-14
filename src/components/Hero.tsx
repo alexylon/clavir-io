@@ -10,10 +10,8 @@ export default function Hero() {
           Learn touch typing without leaving the terminal.
         </p>
         <p className={styles.subtitle}>
-          Progressive lessons for QWERTY, Dvorak & Colemak. Real-time stats, a virtual keyboard
-          with finger hints, and session history — in a fast, lightweight
-          binary built with Rust
-          and <a href="https://ratatui.rs" target="_blank" rel="noopener noreferrer">ratatui</a>.
+          A free, open-source typing tutor with progressive lessons for QWERTY, Dvorak & Colemak — real-time stats,
+          a virtual keyboard with finger hints, and session history. Made with Rust.
         </p>
         <div className={styles.actions}>
           <button className={styles.btnPrimary} onClick={() => document.getElementById("install")?.scrollIntoView({ behavior: "smooth" })}>Get Started</button>

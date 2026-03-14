@@ -57,6 +57,6 @@ export const features: Feature[] = [
     icon: "\u2713",
     title: "Just Works",
     description:
-      "No config files, no accounts, no internet needed. A single binary \u2014 install it, run it, start typing. In-progress sessions are saved on exit, even on SIGTERM/SIGHUP.",
+      "No accounts, no internet, no setup needed. A single binary \u2014 install it, run it, start typing. In-progress sessions are saved on exit.",
   },
 ];

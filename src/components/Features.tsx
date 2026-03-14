@@ -5,7 +5,7 @@ export default function Features() {
   return (
     <section id="features" className={styles.section}>
       <div className="container">
-        <h2 className="section-heading">What you get</h2>
+        <h2 className="section-heading">Features</h2>
         <div className={styles.grid}>
           {features.map((f) => (
             <div className={styles.card} key={f.title}>
