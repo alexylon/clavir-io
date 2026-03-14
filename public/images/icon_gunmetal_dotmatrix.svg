@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 533 533">
   <defs>
-    <!-- Outer bezel gradient - aluminum -->
+    <!-- Outer bezel gradient - gun metal -->
     <linearGradient id="bezel" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e8e8e8"/>
-      <stop offset="15%" stop-color="#d0d0d0"/>
-      <stop offset="50%" stop-color="#a8a8a8"/>
-      <stop offset="85%" stop-color="#c0c0c0"/>
-      <stop offset="100%" stop-color="#909090"/>
+      <stop offset="0%" stop-color="#6a6e73"/>
+      <stop offset="15%" stop-color="#555960"/>
+      <stop offset="50%" stop-color="#3a3d42"/>
+      <stop offset="85%" stop-color="#484c52"/>
+      <stop offset="100%" stop-color="#2a2d31"/>
     </linearGradient>
     <!-- Inner screen gradient -->
     <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#000f00"/>
-      <stop offset="100%" stop-color="#000f00"/>
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="100%" stop-color="#000000"/>
     </linearGradient>
     <!-- Dot pattern - dim background -->
     <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse">
@@ -48,7 +48,7 @@
     </radialGradient>
     <!-- Blur for glow around shapes -->
     <filter id="cblur" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="50"/>
+      <feGaussianBlur stdDeviation="20"/>
     </filter>
     <filter id="ledblur" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="24"/>
