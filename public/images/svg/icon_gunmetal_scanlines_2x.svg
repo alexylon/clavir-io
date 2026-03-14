@@ -14,7 +14,7 @@
     </pattern>
     <!-- Scan line pattern - green glow near letter/cursor -->
     <pattern id="glowscanlines" width="1" height="7" patternUnits="userSpaceOnUse">
-      <rect x="0" y="1.25" width="1" height="4.5" fill="#20ff20" opacity="0.95"/>
+      <rect x="0" y="1.25" width="1" height="4.5" fill="#33ff33" opacity="0.95"/>
     </pattern>
     <!-- Glossy highlight -->
     <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
@@ -65,7 +65,7 @@
   <!-- Background scan lines glowing near the cursor -->
   <rect x="28" y="28" width="477" height="477" rx="72" fill="url(#glowscanlines)" opacity="0.5" mask="url(#cursormask-glow)"/>
   <!-- C letter - rounded scan line bars with curve-calculated x positions -->
-  <g fill="#20ff20">
+  <g fill="#33ff33">
     <rect x="233.7" y="99.25" width="47.6" height="4.5" rx="2.25"/>
     <rect x="209.1" y="106.25" width="96.6" height="4.5" rx="2.25"/>
     <rect x="191.1" y="113.25" width="132.3" height="4.5" rx="2.25"/>
@@ -134,7 +134,7 @@
     <rect x="233.7" y="428.25" width="47.6" height="4.5" rx="2.25"/>
   </g>
   <!-- Cursor - rounded scan line bars -->
-  <g fill="#20ff20" opacity="0.35">
+  <g fill="#33ff33" opacity="0.35">
     <rect x="408" y="71.25" width="24" height="4.5" rx="2.25"/>
     <rect x="408" y="78.25" width="24" height="4.5" rx="2.25"/>
     <rect x="408" y="85.25" width="24" height="4.5" rx="2.25"/>
