@@ -26,8 +26,8 @@
   --bg-card: #1c1f2e;
   --text: #c9cdd8;
   --text-muted: #8a8fa3;
-  --accent: #4CD948;
-  --accent-hover: #60E55C;
+  --accent: #2AD05C;
+  --accent-hover: #0AB84B;
   --border: #2a2d3e;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
@@ -54,7 +54,7 @@ a {
 }
 
 a:hover {
-  color: var(--accent-hover);
+  color: var(--accent);
 }
 
 code {

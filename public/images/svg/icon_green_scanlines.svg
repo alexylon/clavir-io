@@ -4,7 +4,7 @@
     <linearGradient id="bezel" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#55ff55"/>
       <stop offset="15%" stop-color="#40ff40"/>
-      <stop offset="50%" stop-color="#33ff33"/>
+      <stop offset="50%" stop-color="#00FF66"/>
       <stop offset="85%" stop-color="#28dd28"/>
       <stop offset="100%" stop-color="#20bb20"/>
     </linearGradient>
@@ -14,7 +14,7 @@
     </pattern>
     <!-- Scan line pattern - green glow near letter/cursor -->
     <pattern id="glowscanlines" width="1" height="14" patternUnits="userSpaceOnUse">
-      <rect x="0" y="2.5" width="1" height="9" fill="#33ff33" opacity="0.95"/>
+      <rect x="0" y="2.5" width="1" height="9" fill="#00FF66" opacity="0.95"/>
     </pattern>
     <!-- Glossy highlight -->
     <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
@@ -65,7 +65,7 @@
   <!-- Background scan lines glowing near the cursor -->
   <rect x="28" y="28" width="477" height="477" rx="72" fill="url(#glowscanlines)" opacity="0.5" mask="url(#cursormask-glow)"/>
   <!-- C letter - rounded scan line bars with curve-calculated x positions -->
-  <g fill="#33ff33">
+  <g fill="#00FF66">
     <rect x="212.5" y="100.5" width="93" height="9" rx="4.5"/>
     <rect x="184.5" y="114.5" width="145.4" height="9" rx="4.5"/>
     <rect x="165.4" y="128.5" width="183.3" height="9" rx="4.5"/>
@@ -100,7 +100,7 @@
     <rect x="212.5" y="422.5" width="93" height="9" rx="4.5"/>
   </g>
   <!-- Cursor - rounded scan line bars -->
-  <g fill="#33ff33" opacity="0.35">
+  <g fill="#00FF66" opacity="0.35">
     <rect x="408" y="72.5" width="24" height="9" rx="4.5"/>
     <rect x="408" y="86.5" width="24" height="9" rx="4.5"/>
     <rect x="408" y="100.5" width="24" height="9" rx="4.5"/>
