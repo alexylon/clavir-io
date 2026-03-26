@@ -30,11 +30,14 @@ export default function Install() {
           </div>
         </div>
         <p className={styles.note}>
-          Then run <code>clavirio</code> in your terminal. Or pass a text file directly: <code>clavirio mytext.txt</code>
+          Then run <code>clavirio</code> in your terminal, or jump straight into a mode:
         </p>
+        <pre className={styles.cli}><code>{`clavirio               # lessons menu
+clavirio -w            # random words
+clavirio -t 60         # timed 60s
+clavirio -f mytext.txt # custom file`}</code></pre>
         <p className={styles.note}>
-          Session history and display preferences are stored automatically
-          in <code>~/.clavirio/history.json</code> and <code>~/.clavirio/settings.toml</code>.
+          Session history and preferences are stored in <code>~/.clavirio/</code>.
         </p>
       </div>
     </section>

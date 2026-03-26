@@ -9,43 +9,43 @@ export const features: Feature[] = [
     icon: "~",
     title: "15 Progressive Lessons",
     description:
-      "From home-row basics to full paragraphs and Rust code. Lessons 1\u20139 are tailored to each keyboard layout (QWERTY, Dvorak, Colemak); lessons 10\u201315 are shared. The menu auto-advances to your next unfinished lesson.",
+      "From home-row basics to full paragraphs and Rust code. Lessons 1\u20139 are tailored to each keyboard layout; lessons 10\u201315 are shared across all three.",
+  },
+  {
+    icon: "\u25B6",
+    title: "Practice Modes",
+    description:
+      "Random words, timed sessions, common bigrams, real quotes, weak-key drills targeting your least accurate characters, and a free-typing Zen mode. Toggle between Lessons and Practice with the m key.",
   },
   {
     icon: ">_",
     title: "Live Stats",
     description:
-      "WPM, accuracy, elapsed time, keystroke counts, and line progress update as you type. A completion summary highlights your weakest keys so you know what to practice next.",
+      "WPM, accuracy, elapsed time, keystroke counts, and line progress update as you type. The completion screen shows a WPM sparkline graph and your weakest keys.",
   },
   {
     icon: "\u2328",
     title: "Virtual Keyboard",
     description:
-      "An on-screen keyboard highlights the next expected key (including Shift) in real time. Finger hints (Pinky, Ring, Middle, Index, Thumb) on the top border help you learn proper hand placement. Adapts to macOS and PC layouts.",
-  },
-  {
-    icon: "\u2699",
-    title: "Keyboard Layouts",
-    description:
-      "Supports QWERTY, Dvorak, and Colemak. Switch layouts with a single keystroke from the main menu.",
+      "An on-screen keyboard highlights the next expected key (including Shift) in real time. Finger hints help you learn proper hand placement. Supports QWERTY, Dvorak, and Colemak — switch layouts with a single keystroke. Adapts to macOS and PC modifier labels.",
   },
   {
     icon: "\u2717",
     title: "Error Feedback",
     description:
-      "Wrong keystrokes are shown inline and block progress until corrected with Backspace. Learn accuracy, not just speed.",
+      "Wrong keystrokes are shown inline and block progress until corrected with Backspace.",
   },
   {
     icon: "\u2193",
     title: "Session History",
     description:
-      "Results are saved to ~/.clavirio/history.json automatically. Browse past sessions with per-lesson tracking, view averages, and track your improvement over time.",
+      "Browse past sessions with per-lesson tracking and view averages. Results are saved automatically between sessions.",
   },
   {
     icon: "\u263C",
     title: "Display Settings",
     description:
-      "Toggle finger hints, key hints, the virtual keyboard, and dark/light theme from the main menu. All preferences are saved to ~/.clavirio/settings.toml.",
+      "Toggle finger hints, key hints, the virtual keyboard, and dark/light theme from the main menu. Preferences are saved automatically.",
   },
   {
     icon: "\u270E",

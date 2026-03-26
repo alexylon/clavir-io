@@ -10,8 +10,8 @@ export default function Hero() {
           Learn touch typing without leaving the terminal.
         </p>
         <p className={styles.subtitle}>
-          A free, open-source typing tutor with progressive lessons for QWERTY, Dvorak & Colemak — real-time stats,
-          a virtual keyboard with finger hints, and session history. Made with Rust.
+          A free, open-source typing tutor for the terminal. Progressive lessons, practice modes,
+          real-time stats, and a virtual keyboard with finger hints — for QWERTY, Dvorak, and Colemak.
         </p>
         <div className={styles.actions}>
           <button className={styles.btnPrimary} onClick={() => document.getElementById("install")?.scrollIntoView({ behavior: "smooth" })}>Get Started</button>

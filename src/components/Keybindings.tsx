@@ -7,7 +7,7 @@ export default function Keybindings() {
       <div className="container">
         <h2 className="section-heading">Keyboard Controls</h2>
         <p className="section-intro">
-          Navigate with Vim-style keys or arrows. Everything is one or two keystrokes away.
+          Navigate with Vim-style keys or arrows.
         </p>
         <div className={styles.list}>
           {keybindings.map((kb) => (
