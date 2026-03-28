@@ -58,3 +58,14 @@
     font-size: 0.8rem;
   }
 }
+
+@media (max-width: 520px) {
+  .nav {
+    gap: 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .logo {
+    font-size: 0.75rem;
+  }
+}

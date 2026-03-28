@@ -11,11 +11,11 @@ export default function Lessons() {
   return (
     <section id="lessons" className={styles.section}>
       <div className="container">
-        <h2 className="section-heading">15 Built-in Lessons</h2>
+        <h2 className="section-heading">27 Built-in Lessons</h2>
         <p className="section-intro">
-          Each lesson introduces new keys and builds on the previous ones.
-          Lessons 1–9 are tailored to each keyboard layout; lessons 10–15 are
-          shared across all layouts.
+          A universal finger-pair system: 2 new keys per lesson, same physical
+          positions across all 3 layouts. Lessons 1–21 are layout-specific;
+          22–27 cover numbers and symbols.
         </p>
 
         <div className={styles.tabs}>

@@ -1,0 +1,41 @@
+.section {
+  padding: 4rem 0;
+}
+
+.content {
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--text-muted);
+  line-height: 1.7;
+  text-align: left;
+}
+
+.content p {
+  margin-bottom: 1rem;
+}
+
+.content a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
+
+.content strong {
+  color: #ddd;
+}
+
+.progression {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+@media (max-width: 1040px) {
+  .section {
+    max-width: var(--max-width-2);
+    margin: 0 auto;
+  }
+}

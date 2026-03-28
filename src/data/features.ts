@@ -7,15 +7,15 @@ export interface Feature {
 export const features: Feature[] = [
   {
     icon: "~",
-    title: "15 Progressive Lessons",
+    title: "27 Progressive Lessons",
     description:
-      "From home-row basics to full paragraphs and Rust code. Lessons 1\u20139 are tailored to each keyboard layout; lessons 10\u201315 are shared across all three.",
+      "A universal finger-pair system \u2014 2 new keys per lesson, same physical positions across all 3 layouts. Each row follows index \u2192 middle \u2192 ring \u2192 pinky \u2192 reach \u2192 full row \u2192 row + Shift. Lessons 1\u201321 are layout-specific; 22\u201327 cover numbers and symbols.",
   },
   {
     icon: "\u25B6",
     title: "Practice Modes",
     description:
-      "Random words, timed sessions, common bigrams, real quotes, weak-key drills targeting your least accurate characters, and a free-typing Zen mode. Toggle between Lessons and Practice with the m key.",
+      "Random words (english 200/1k), code keywords (Rust, Python, JavaScript, Go, C/C++, Java, HTML/CSS), timed sessions, common bigrams, real quotes, weak-key drills, and Zen free-typing. Toggle punctuation and numbers injection with 5/6 in practice mode.",
   },
   {
     icon: ">_",
@@ -27,13 +27,13 @@ export const features: Feature[] = [
     icon: "\u2328",
     title: "Virtual Keyboard",
     description:
-      "An on-screen keyboard highlights the next expected key (including Shift) in real time. Finger hints help you learn proper hand placement. Supports QWERTY, Dvorak, and Colemak — switch layouts with a single keystroke. Adapts to macOS and PC modifier labels.",
+      "An on-screen keyboard highlights the next expected key (including Shift) in real time. Finger hints help you learn proper hand placement. Supports QWERTY, Dvorak, and Colemak \u2014 switch layouts with a single keystroke. Adapts to macOS and PC modifier labels.",
   },
   {
     icon: "\u2717",
     title: "Error Feedback",
     description:
-      "Wrong keystrokes are shown inline and block progress until corrected with Backspace.",
+      "Two modes: error stop off (default) lets you type past mistakes with backspace correction within the current word; error stop on blocks until corrected. Toggle with key 4.",
   },
   {
     icon: "\u2193",
@@ -45,7 +45,7 @@ export const features: Feature[] = [
     icon: "\u263C",
     title: "Display Settings",
     description:
-      "Toggle finger hints, key hints, the virtual keyboard, and dark/light theme from the main menu. Preferences are saved automatically.",
+      "Toggle finger hints, key hints, the virtual keyboard, error stop, and dark/light theme from the main menu. Preferences including menu mode are saved automatically across sessions.",
   },
   {
     icon: "\u270E",

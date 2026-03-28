@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Screenshot from "./components/Screenshot";
+import Methodology from "./components/Methodology";
 import Features from "./components/Features";
 import Lessons from "./components/Lessons";
 import Keybindings from "./components/Keybindings";
@@ -15,6 +16,7 @@ export default function App() {
       <main>
         <Hero />
         <Screenshot />
+        <Methodology />
         <Features />
         <Lessons />
         <Keybindings />

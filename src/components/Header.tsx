@@ -10,6 +10,7 @@ export default function Header() {
       <div className={`container ${styles.inner}`}>
         <button className={styles.logo} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>clavirio</button>
         <nav className={styles.nav}>
+          <button onClick={() => scrollTo("methodology")}>Methodology</button>
           <button onClick={() => scrollTo("features")}>Features</button>
           <button onClick={() => scrollTo("lessons")}>Lessons</button>
           <button onClick={() => scrollTo("keybindings")}>Controls</button>
