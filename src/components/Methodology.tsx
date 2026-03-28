@@ -28,6 +28,9 @@ export default function Methodology() {
             index pair → middle pair → ring pair → pinky pair → reach pair → full row → row + Shift
           </p>
           <p>
+            This is meant to reduce reliance on <strong>explicit recall</strong> of key locations and build more <strong>automatic control</strong> within the keyboard’s <strong>row-and-column structure</strong>.
+          </p>
+          <p>
             Each lesson introduces only 2 new keys and uses only characters from
             earlier lessons. The same progression is used for <strong>QWERTY,
             Dvorak, and Colemak</strong>, so the lesson structure stays consistent
