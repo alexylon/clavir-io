@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.clavir.io/sitemap.xml
+Sitemap: https://clavir.io/sitemap.xml
