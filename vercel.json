@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path(.*)",
+      "has": [{ "type": "host", "value": "clavir-io.vercel.app" }],
+      "destination": "https://clavir.io/:path",
+      "permanent": true
+    }
+  ]
+}
