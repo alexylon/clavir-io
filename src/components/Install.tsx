@@ -39,10 +39,11 @@ sudo mv clavirio /usr/local/bin/
         <p className={styles.note}>
           Then run <code>clavirio</code> in your terminal, or jump straight into a mode:
         </p>
-        <pre className={styles.cli}><code>{`clavirio               # lessons menu
-clavirio -w            # random words
-clavirio -t 60         # timed 60s
-clavirio -f mytext.txt # custom file`}</code></pre>
+        <pre className={styles.cli}><code>{`clavirio                    # lessons menu
+clavirio -w                 # random words
+clavirio -t 60              # timed 60s
+clavirio -t 60 -l words.txt # your own words
+clavirio -f mytext.txt      # custom file`}</code></pre>
         <p className={styles.note}>
           Session history and preferences are stored in <code>~/.clavirio/</code>.
         </p>

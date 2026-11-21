@@ -9,19 +9,19 @@ export const features: Feature[] = [
     icon: "~",
     title: "27 Progressive Lessons",
     description:
-      "A universal finger-pair system \u2014 2 new keys per lesson, same physical positions across all 3 layouts. Each row follows index \u2192 middle \u2192 ring \u2192 pinky \u2192 reach \u2192 full row \u2192 row + Shift. Lessons 1\u201321 are layout-specific; 22\u201327 cover numbers and symbols.",
+      "A universal finger-pair system \u2014 2 new keys per lesson, same physical positions across all 3 layouts. Each row follows index \u2192 middle \u2192 ring \u2192 pinky \u2192 reach \u2192 full row \u2192 row + Shift. Lessons 1\u201321 are layout-specific; 22\u201327 cover numbers and symbols. A lesson is passed at 95% accuracy; below that, the menu stays on it instead of moving on.",
   },
   {
     icon: "\u25B6",
     title: "Practice Modes",
     description:
-      "Random words (english 200/1k), code keywords (Rust, Python, JavaScript, Go, C/C++, Java, HTML/CSS), timed sessions, common bigrams, real quotes, weak-key drills, and Zen free-typing. Toggle punctuation and numbers injection with 5/6 in practice mode.",
+      "Random words (english 200/1k, or a file of your own words in any language), code keywords (Rust, Python, JavaScript, Go, C/C++, Java, HTML/CSS), timed sessions, common bigrams, real quotes, weak-key drills, and Zen free-typing. Toggle punctuation and numbers injection with 5/6 in practice mode.",
   },
   {
     icon: ">_",
     title: "Live Stats",
     description:
-      "WPM, accuracy, elapsed time, keystroke counts, and line progress update as you type. The completion screen shows a WPM sparkline graph and your weakest keys.",
+      "WPM, accuracy, elapsed time, keystroke counts, and line progress update as you type. The completion screen shows a WPM sparkline graph and your weakest keys, and colours each key you typed by its accuracy.",
   },
   {
     icon: "\u2328",
@@ -39,7 +39,7 @@ export const features: Feature[] = [
     icon: "\u2193",
     title: "Session History",
     description:
-      "Browse past sessions with per-lesson tracking and view averages. Results are saved automatically between sessions.",
+      "Browse past sessions with per-lesson tracking and view averages. The completion screen shows your best earlier speed for the same lesson or practice on the same layout, or \u201CNew best!\u201D when you beat it. Results are saved automatically between sessions.",
   },
   {
     icon: "\u263C",
