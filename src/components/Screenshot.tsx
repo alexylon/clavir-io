@@ -33,8 +33,8 @@ export default function Screenshot() {
           <div className={styles.wrapper} onClick={() => setLightbox("/images/screenshot_dark_2.webp")}>
             <img
               src="/images/screenshot_dark_2.webp"
-              alt="clavirio dark theme — finished screen with WPM sparkline and weakest keys"
-              width={2752}
+              alt="clavirio dark theme — results screen with a new best speed, WPM sparkline, weakest keys and each key coloured by its accuracy"
+              width={2680}
               height={2120}
               loading="lazy"
               className={styles.image}
