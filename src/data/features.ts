@@ -49,9 +49,9 @@ export const features: Feature[] = [
   },
   {
     icon: "\u270E",
-    title: "Custom Texts",
+    title: "Your Own Texts",
     description:
-      "Load any text file with Ctrl-F or -f. Curly quotes, dashes, and ellipses become characters you can type. Practice typing with your own content \u2014 code, prose, anything \u2014 and compare each session with earlier ones of the same file.",
+      "Type any text file as it is with Ctrl-F or -f, or practice random words and timed sessions from a file of your own words in any language with -l. Curly quotes, dashes, and ellipses become characters you can type, and each session is compared with earlier ones of the same file.",
   },
   {
     icon: "\u2713",
