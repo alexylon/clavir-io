@@ -12,6 +12,7 @@ export const keybindings: Keybinding[] = [
   { keys: "4", action: "Toggle error stop" },
   { keys: "t", action: "Cycle theme" },
   { keys: "5 / 6", action: "Toggle punctuation / numbers (practice only)" },
+  { keys: "7", action: "Toggle shift error (needs a terminal with the kitty keyboard protocol)" },
   { keys: "h", action: "Open session history" },
   { keys: "Ctrl-F", action: "Load a custom text file" },
   { keys: "Ctrl-R", action: "Restart current lesson" },
