@@ -30,7 +30,7 @@ const SWIPE_DISTANCE = 50;
 const NEAR_SCREEN = "200px";
 
 const demo: Shot = {
-  src: "/images/demo.webp",
+  src: "/images/demo.gif",
   alt: "clavirio dark theme — typing a lesson with capitals: the next key, its finger and Shift light up, wrong keys flash orange, then the results colour each key by its accuracy",
   caption: "Typing a lesson",
   ...DEMO_SIZE,
