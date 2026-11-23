@@ -119,14 +119,22 @@
   width: var(--control-size);
   height: var(--control-size);
   padding: 0;
-  border: none;
+  border: 1px solid var(--border);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--bg-raised);
   color: var(--text);
-  font-size: 2rem;
-  line-height: 1;
   cursor: pointer;
-  transition: background 0.15s;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.control svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.close svg {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 /* A click that just misses a button still reaches it, instead of the backdrop,
@@ -144,7 +152,8 @@
 
 .control:hover,
 .control:focus-visible {
-  background: rgba(255, 255, 255, 0.24);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .prev,
@@ -164,7 +173,6 @@
 .close {
   bottom: calc(100% + var(--control-gap) / 2);
   right: 0;
-  font-size: 1.6rem;
 }
 
 @keyframes fadeIn {
@@ -196,10 +204,5 @@
   .next {
     left: auto;
     right: var(--control-gap);
-  }
-
-  .prev,
-  .next {
-    background: rgba(0, 0, 0, 0.55);
   }
 }

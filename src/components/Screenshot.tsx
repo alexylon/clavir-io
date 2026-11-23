@@ -67,6 +67,26 @@ const shots = [demo, ...screenshots];
 
 const isZoomed = () => (window.visualViewport?.scale ?? 1) > 1;
 
+// Drawn like the copy button's icons, and centred in their buttons in any font
+const ICONS = {
+  close: (
+    <>
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+    </>
+  ),
+  previous: <polyline points="15 18 9 12 15 6" />,
+  next: <polyline points="9 18 15 12 9 6" />,
+};
+
+function Icon({ name }: { name: keyof typeof ICONS }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      {ICONS[name]}
+    </svg>
+  );
+}
+
 export default function Screenshot() {
   const [current, setCurrent] = useState<number | null>(null);
   const [demoSrc, setDemoSrc] = useState(DEMO_STILL);
@@ -285,13 +305,13 @@ export default function Screenshot() {
                 />
                 {/* Close, shown above the image, comes first in the Tab order */}
                 <button type="button" className={`${styles.control} ${styles.close}`} aria-label="Close" onClick={onButton(close)}>
-                  ×
+                  <Icon name="close" />
                 </button>
                 <button type="button" className={`${styles.control} ${styles.prev}`} aria-label="Previous image" onClick={onButton(() => turn(-1))}>
-                  ‹
+                  <Icon name="previous" />
                 </button>
                 <button type="button" className={`${styles.control} ${styles.next}`} aria-label="Next image" onClick={onButton(() => turn(1))}>
-                  ›
+                  <Icon name="next" />
                 </button>
               </div>
               <figcaption className={styles.caption} aria-live="polite">
