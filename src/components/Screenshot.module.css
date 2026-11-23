@@ -2,25 +2,45 @@
   padding: 2rem 0 4rem;
 }
 
-.grid {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.wrapper {
+.main,
+.thumbnail {
   display: block;
-  border-radius: 12px;
-  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  background: none;
   border: 1px solid var(--border);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  position: relative;
+  overflow: hidden;
   cursor: zoom-in;
   transition: border-color 0.15s;
 }
 
-.wrapper:hover {
+.main:hover,
+.thumbnail:hover {
   border-color: var(--accent);
+}
+
+.main:focus-visible,
+.thumbnail:focus-visible,
+.control:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.main {
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.thumbnail {
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .image {
@@ -30,25 +50,156 @@
 }
 
 .lightbox {
+  --control-size: 3rem;
+  --control-gap: 0.75rem;
+  /* Room for an arrow on each side, and for the close button above and the
+     caption below */
+  --image-max-width: calc(100vw - 2 * (var(--control-size) + 2 * var(--control-gap)));
+  --image-max-height: calc(100vh - var(--control-size) - 1.5rem - 4 * var(--control-gap));
   position: fixed;
   inset: 0;
   z-index: 1000;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(5, 6, 9, 0.95);
   cursor: zoom-out;
+  /* Scrolls only if a large font makes the figure taller than the screen */
+  overflow: auto;
   animation: fadeIn 0.15s ease;
 }
 
+/* The visible height, without a phone's browser bars */
+@supports (height: 100dvh) {
+  .lightbox {
+    --image-max-height: calc(100dvh - var(--control-size) - 1.5rem - 4 * var(--control-gap));
+  }
+}
+
+.lightbox:focus {
+  outline: none;
+}
+
+/* Centred by its margins, so a figure taller than the screen starts at the
+   top and can be scrolled, instead of losing its top */
+.figure {
+  margin: auto;
+  /* The close button's room above the image, counted when centring */
+  padding-top: calc(var(--control-size) + var(--control-gap) / 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* The image with its controls around it: the arrows beside it, close above it */
+.frame {
+  position: relative;
+}
+
 .lightboxImage {
-  max-width: 90vw;
-  max-height: 90vh;
+  display: block;
+  /* Sized from its aspect ratio before it loads, so the controls stay put */
+  width: min(var(--image-max-width), calc(var(--image-max-height) * var(--ratio)));
+  height: auto;
+  aspect-ratio: var(--ratio);
   border-radius: 8px;
   box-shadow: 0 16px 64px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.caption {
+  margin-top: var(--control-gap);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.control {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--control-size);
+  height: var(--control-size);
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--text);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+/* A click that just misses a button still reaches it, instead of the backdrop,
+   which closes the gallery. The hit area stops at the image's edge. */
+.control::before {
+  content: "";
+  position: absolute;
+  inset: calc(-1 * var(--control-gap));
+  border-radius: 50%;
+}
+
+.close::before {
+  inset: calc(-1 * var(--control-gap) / 2);
+}
+
+.control:hover,
+.control:focus-visible {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.prev,
+.next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev {
+  right: calc(100% + var(--control-gap));
+}
+
+.next {
+  left: calc(100% + var(--control-gap));
+}
+
+.close {
+  bottom: calc(100% + var(--control-gap) / 2);
+  right: 0;
+  font-size: 1.6rem;
 }
 
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lightbox {
+    animation: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .thumbnails {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* No room beside the image: the arrows go over its edges */
+  .lightbox {
+    --image-max-width: 96vw;
+  }
+
+  .prev {
+    right: auto;
+    left: var(--control-gap);
+  }
+
+  .next {
+    left: auto;
+    right: var(--control-gap);
+  }
+
+  .prev,
+  .next {
+    background: rgba(0, 0, 0, 0.55);
+  }
 }

@@ -50,6 +50,9 @@ sudo mv clavirio /usr/local/bin/
 # Windows — extract the .zip,
 # then add the folder to your PATH`}</code></pre>
             <p className={styles.cardHint}>
+              <strong>Linux:</strong> The binary is for x86_64 and runs on Debian 12, Ubuntu 22.04 and newer.
+            </p>
+            <p className={styles.cardHint}>
               <strong>macOS:</strong> On first run, macOS may block the binary. Go to System Settings &rarr; Privacy &amp; Security and click <em>Allow Anyway</em>.
             </p>
           </div>
@@ -62,6 +65,9 @@ sudo mv clavirio /usr/local/bin/
               <pre><code>cargo install clavirio</code></pre>
               <CopyButton text="cargo install clavirio" />
             </div>
+            <p className={styles.cardHint}>
+              With <a href="https://github.com/cargo-bins/cargo-binstall" target="_blank" rel="noopener noreferrer">cargo-binstall</a>, <code>cargo binstall clavirio</code> downloads the prebuilt binary instead of building it.
+            </p>
           </div>
         </div>
         <p className={styles.note}>
